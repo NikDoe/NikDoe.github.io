@@ -3,35 +3,49 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>todo</title>
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/style.css">
+    <title>To Do List</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <div class="container">
-        <div class="header">
-            <div class="clear">
-                <i class="fa fa-refresh"></i>
+        <div class="row">
+            <div class="col mx-auto col-md-8 mt-3 text-center" id="main-container">
+                <div class="alert align-items-center" id="message"></div>
+                <form id="itemForm">
+                    <h3 class="">СПИСОК ЗАДАЧ</h3>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="itemInput" value=""
+                            placeholder="добавить задачу...">
+                        <button class="btn btn-outline-primary">добавить</button>
+                    </div>
+                </form>
+                <ul class="nav nav-tabs">
+                    <li class="nav-item" data-type="all">
+                        <a class="nav-link active" href="#">все</a>
+                    </li>
+                    <li class="nav-item" data-type="todo">
+                        <a class="nav-link" href="#">не выполнил</a>
+                    </li>
+                    <li class="nav-item" data-type="done">
+                        <a class="nav-link" href="#">выполнил</a>
+                    </li>
+                </ul>
+                <!-- list items -->
+                <ul class="list-group list-group-flush" id="itemList">
+                </ul>
+                <input type="hidden" id="filterType" value="all">
+                <input type="hidden" id="objIndex" value="">
             </div>
-            <div id="date"></div>
         </div>
-        <div class="content">
-            <ul id="list">
 
-            </ul>
-        </div>
-        <div class="add-to-do">
-            <i class="fa fa-plus-circle"></i>
-            <input type="text" id="input" placeholder="Добавить задание">
-        </div>
     </div>
-
-    <script src="js/app.js"></script>
-
+    <script src="main.js"></script>
 </body>
 
 </html>

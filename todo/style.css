@@ -1,0 +1,39 @@
+.container .row #main-container {
+    min-height: 100vh;
+}
+
+#main-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0 !important;
+    justify-content: center;
+}
+
+/* #message {
+    margin: 10px 0 auto 0;
+} */
+
+
+.green {
+    color: lightgreen;
+}
+
+.red {
+    color: lightcoral;
+}
+
+.blue {
+    color: skyblue
+}
+
+#itemList {
+    font-size: 1.5rem;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
